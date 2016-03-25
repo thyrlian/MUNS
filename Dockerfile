@@ -37,3 +37,15 @@ RUN gem install unicorn
 RUN gem install mongo
 
 # ---------------------------------------------------------------------- #
+
+
+# MongoDB layer
+# ---------------------------------------------------------------------- #
+
+# https://www.mongodb.org/
+RUN \
+  curl -O https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-3.2.4.tgz && \
+  tar -zxvf mongodb-linux-x86_64-3.2.4.tgz && \
+  rm mongodb-linux-x86_64-3.2.4.tgz && \
+  mv mongodb-linux-x86_64-3.2.4 mongodb
+# ---------------------------------------------------------------------- #
