@@ -35,6 +35,7 @@ RUN \
   tar -zxvf mongodb-linux-x86_64-3.2.4.tgz && \
   rm mongodb-linux-x86_64-3.2.4.tgz && \
   mv mongodb-linux-x86_64-3.2.4 mongodb
+VOLUME ["/data/db"]
 ENV PATH $PATH:/mongodb/bin
 
 
