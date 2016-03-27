@@ -36,6 +36,8 @@ RUN \
   rm mongodb-linux-x86_64-3.2.4.tgz && \
   mv mongodb-linux-x86_64-3.2.4 mongodb
 VOLUME ["/data/db"]
+# EXPOSE 27017
+# EXPOSE 28017
 ENV PATH $PATH:/mongodb/bin
 
 
@@ -49,5 +51,8 @@ RUN \
   echo "\ndaemon off;" >> /etc/nginx/nginx.conf && \
   chown -R www-data:www-data /var/lib/nginx
 VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log/nginx", "/var/www/html"]
+# CMD ["nginx"]
+# EXPOSE 80
+# EXPOSE 443
 
 
