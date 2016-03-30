@@ -19,6 +19,7 @@ RUN gem install sinatra
 # ---------------------------------------------------------------------- #
 # https://rubygems.org/gems/unicorn
 RUN gem install unicorn
+VOLUME ["/var/tmp/unicorn", "/var/log/unicorn"]
 
 
 # Ruby MongoDB Driver layer
