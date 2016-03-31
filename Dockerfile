@@ -12,7 +12,7 @@ FROM ruby:2.3
 # Sinatra layer
 # ---------------------------------------------------------------------- #
 # https://rubygems.org/gems/sinatra
-RUN gem install sinatra
+RUN gem install sinatra sinatra-contrib
 
 
 # Unicorn layer
