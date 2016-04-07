@@ -32,12 +32,11 @@ RUN gem install mongo
 # ---------------------------------------------------------------------- #
 # https://www.mongodb.org/
 RUN \
-  curl -O https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-3.2.4.tgz && \
-  tar -zxvf mongodb-linux-x86_64-3.2.4.tgz && \
-  rm mongodb-linux-x86_64-3.2.4.tgz && \
-  mv mongodb-linux-x86_64-3.2.4 mongodb
+  apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927 && \
+  echo "deb http://repo.mongodb.org/apt/debian wheezy/mongodb-org/3.2 main" | tee /etc/apt/sources.list.d/mongodb-org-3.2.list && \
+  apt-get update && \
+  apt-get install -y mongodb-org
 VOLUME ["/data/db"]
-ENV PATH $PATH:/mongodb/bin
 
 
 # Nginx layer
