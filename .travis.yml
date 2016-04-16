@@ -2,13 +2,13 @@ language: bash
 services: docker
 
 env:
-  - DOCKER_IMAGE_PATH=~/docker_image
+  - WORKSPACE=~/workspace
 
 install:
-  - git clone https://github.com/thyrlian/MUNS "$DOCKER_IMAGE_PATH"
+  - git clone https://github.com/thyrlian/MUNS "$WORKSPACE"
 
 before_script:
-  - cd "$DOCKER_IMAGE_PATH"
+  - cd "$WORKSPACE"
 
 script:
   - docker build -t muns .
