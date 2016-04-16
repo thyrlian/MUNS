@@ -1,0 +1,17 @@
+language: bash
+services: docker
+
+env:
+  - DOCKER_IMAGE_PATH=~/docker_image
+
+install:
+  - git clone https://github.com/thyrlian/MUNS "$DOCKER_IMAGE_PATH"
+
+before_script:
+  - cd "$DOCKER_IMAGE_PATH"
+
+script:
+  - docker build -t muns .
+
+after_script:
+  - docker images
