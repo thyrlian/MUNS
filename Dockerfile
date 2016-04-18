@@ -9,6 +9,11 @@
 FROM ruby:2.3
 
 
+# Author
+# ---------------------------------------------------------------------- #
+MAINTAINER Jing Li <thyrlian@gmail.com>
+
+
 # Sinatra layer
 # ---------------------------------------------------------------------- #
 # https://rubygems.org/gems/sinatra
