@@ -5,3 +5,16 @@
 [![Build Status](https://travis-ci.org/thyrlian/MUNS.svg?branch=master)](https://travis-ci.org/thyrlian/MUNS)
 
 A Docker image includes **MongoDB** + **Unicorn** + **Nginx** + **Sinatra**.
+
+<img src="https://github.com/thyrlian/MUNS/blob/master/MUNS.png">
+
+```
+                        ##         .
+                  ## ## ##        ==
+               ## ## ## ## ##    ===
+           /"""""""""""""""""\___/ ===
+      ~~~ {~~ ~~~~ ~~~ ~~~~ ~~~ ~ /  ===- ~~~
+           \______ o           __/
+             \    \         __/
+              \____\_______/
+```
