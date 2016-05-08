@@ -18,13 +18,14 @@ MAINTAINER Jing Li <thyrlian@gmail.com>
 # ---------------------------------------------------------------------- #
 # https://rubygems.org/gems/sinatra
 RUN gem install sinatra sinatra-contrib
+VOLUME ["/var/log/sinatra"]
 
 
 # Unicorn layer
 # ---------------------------------------------------------------------- #
 # https://rubygems.org/gems/unicorn
 RUN gem install unicorn
-VOLUME ["/var/tmp/unicorn", "/var/log/unicorn"]
+VOLUME ["/var/log/unicorn"]
 
 
 # Ruby MongoDB Driver layer
@@ -41,7 +42,7 @@ RUN \
   echo "deb http://repo.mongodb.org/apt/debian wheezy/mongodb-org/3.2 main" | tee /etc/apt/sources.list.d/mongodb-org-3.2.list && \
   apt-get update && \
   apt-get install -y mongodb-org
-VOLUME ["/data/db"]
+VOLUME ["/data/db", "/var/log/mongodb"]
 
 
 # Nginx layer
