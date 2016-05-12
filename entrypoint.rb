@@ -24,7 +24,11 @@ module MUNS
     end
     
     def run_daemon
-      system('while true; do sleep 3600; done')
+      begin
+        system('while true; do sleep 3600; done')
+      rescue SystemExit, Interrupt
+        puts 'Exit'
+      end
     end
     
     def colorize(text, color)
