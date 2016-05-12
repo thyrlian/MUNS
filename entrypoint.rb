@@ -61,3 +61,10 @@ end
 
 entrypoint = MUNS::Entrypoint.new
 entrypoint.salute
+entrypoint.print_version
+
+if ARGV.empty?
+  entrypoint.run_daemon
+else
+  system(ARGV.join(' '))
+end
