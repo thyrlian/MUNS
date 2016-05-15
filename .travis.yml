@@ -10,8 +10,10 @@ install:
 
 before_script:
   - env | sort
-  - cd all-in-one
-  - cd "$VERSION"
+  - cd "all-in-one/$VERSION"
+  - echo "=================================================="
+  - pwd
+  - echo "muns:$VERSION"
   - image="muns:$VERSION"
 
 script:
