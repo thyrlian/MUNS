@@ -17,21 +17,24 @@ MAINTAINER Jing Li <thyrlian@gmail.com>
 # Sinatra layer
 # ---------------------------------------------------------------------- #
 # https://rubygems.org/gems/sinatra
-RUN gem install sinatra sinatra-contrib
-VOLUME ["/var/log/sinatra"]
+# https://rubygems.org/gems/sinatra-contrib
+ENV SINATRA_VERSION 1.4.7
+ENV SINATRA_CONTRIB_VERSION 1.4.7
+RUN gem install sinatra:$SINATRA_VERSION sinatra-contrib:$SINATRA_CONTRIB_VERSION
 
 
 # Unicorn layer
 # ---------------------------------------------------------------------- #
 # https://rubygems.org/gems/unicorn
-RUN gem install unicorn
-VOLUME ["/var/log/unicorn"]
+ENV UNICORN_VERSION 5.1.0
+RUN gem install unicorn:$UNICORN_VERSION
 
 
 # Ruby MongoDB Driver layer
 # ---------------------------------------------------------------------- #
 # https://rubygems.org/gems/mongo
-RUN gem install mongo
+ENV MONGO_DRIVER_VERSION 2.2.5
+RUN gem install mongo:$MONGO_DRIVER_VERSION
 
 
 # MongoDB layer
