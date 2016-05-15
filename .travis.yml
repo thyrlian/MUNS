@@ -3,15 +3,18 @@ services: docker
 
 env:
   - WORKSPACE=~/workspace
+  - VERSION=1.0
 
 install:
   - git clone https://github.com/thyrlian/MUNS "$WORKSPACE"
 
 before_script:
-  - cd "$WORKSPACE"
+  - env | sort
+  - cd "all-in-one/$VERSION"
+  - image="muns:$VERSION"
 
 script:
-  - docker build -t muns .
+  - docker build -t "$image" .
 
 after_script:
   - docker images
