@@ -2,18 +2,16 @@ language: bash
 services: docker
 
 env:
-  - WORKSPACE=~/workspace
-  - VERSION=1.0
+  global:
+    - WORKSPACE=~/workspace
+  matrix:
+    - VERSION=1.0
 
 install:
   - git clone https://github.com/thyrlian/MUNS "$WORKSPACE"
 
 before_script:
-  - env | sort
   - cd "all-in-one/$VERSION"
-  - echo "=================================================="
-  - pwd
-  - echo "muns:$VERSION"
   - image="muns:$VERSION"
 
 script:
