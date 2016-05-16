@@ -24,11 +24,8 @@ module MUNS
     end
     
     def run_daemon
-      begin
-        system('while true; do sleep 3600; done')
-      rescue SystemExit, Interrupt
-        puts 'Exit'
-      end
+      # Process.fork { system('while true; do sleep 3600; done') }
+      exec('while true; do sleep 3600; done')
     end
     
     def colorize(text, color)
@@ -66,5 +63,5 @@ entrypoint.print_version
 if ARGV.empty?
   entrypoint.run_daemon
 else
-  system(ARGV.join(' '))
+  exec(ARGV.join(' '))
 end
