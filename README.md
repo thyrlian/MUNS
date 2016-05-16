@@ -26,6 +26,18 @@ A Docker image includes **MongoDB** + **Unicorn** + **Nginx** + **Sinatra**.
               \____\_______/
 ```
 
+## Usage
+
+* Run container in background
+    ```bash
+    docker run -d -p 80:80 -p 443:443 thyrlian/muns:latest
+    ```
+
+* Run container with an interactive shell
+    ```bash
+    docker run -i -t -p 80:80 -p 443:443 thyrlian/muns:latest /bin/bash
+    ```
+
 ## Version History
 
 **1.0**
