@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -eo pipefail
+set -e
 
 function salute() {
   echo '=================================================='
@@ -66,3 +66,11 @@ function color_print() {
     ;;
   esac
 }
+
+if [ "${1:0:1}" != '-' ]; then
+  salute
+  list_versions_info
+  exec "$@"
+fi
+
+run_nop_daemon

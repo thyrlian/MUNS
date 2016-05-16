@@ -109,6 +109,6 @@ ENV APP_DIR /app
 RUN mkdir -p $APP_DIR
 WORKDIR $APP_DIR
 VOLUME $APP_DIR
-COPY entrypoint.rb /usr/local/bin/
-RUN chmod +x /usr/local/bin/entrypoint.rb
-ENTRYPOINT ["entrypoint.rb"]
+COPY entrypoint.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/entrypoint.sh
+ENTRYPOINT ["entrypoint.sh"]
