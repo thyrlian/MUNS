@@ -24,7 +24,6 @@ module MUNS
     end
     
     def run_daemon
-      # Process.fork { system('while true; do sleep 3600; done') }
       exec('while true; do sleep 3600; done')
     end
     
