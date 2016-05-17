@@ -1,0 +1,22 @@
+version: '2'
+
+services:
+  ruby:
+    build: ./rich-ruby
+    entrypoint: /bin/bash
+    command: -c "while true; do sleep 3600; done"
+    links:
+      - mongo
+      - nginx
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - /data/db
+      - /data/configdb
+  nginx:
+    image: nginx
+    ports:
+      - "80:80"
+      - "443:443"
