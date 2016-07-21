@@ -7,7 +7,6 @@ services:
     command: -c "while true; do sleep 3600; done"
     links:
       - mongo
-      - nginx
   mongo:
     image: mongo
     ports:
@@ -20,3 +19,5 @@ services:
     ports:
       - "80:80"
       - "443:443"
+    depends_on:
+      - ruby
