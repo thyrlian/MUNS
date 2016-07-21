@@ -5,6 +5,8 @@ services:
     build: ./rich-ruby
     entrypoint: /bin/bash
     command: -c "while true; do sleep 3600; done"
+    volumes:
+      - $UNICORN_SOCKET
     links:
       - mongo
   mongo:
@@ -19,5 +21,7 @@ services:
     ports:
       - "80:80"
       - "443:443"
+    volumes_from:
+      - ruby:ro
     depends_on:
       - ruby
