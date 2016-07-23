@@ -30,7 +30,11 @@ A Docker image includes **MongoDB** + **Unicorn** + **Nginx** + **Sinatra**.
 * **Ruby** talks to -> **MongoDB** via `mongo-ruby-driver`
 * **Nginx** talks to -> **Unicorn** via `unicorn.sock`
 
-## Usage
+## Usage (`docker-compose`)
+
+
+
+## Usage (all-in-one image)
 
 * Run container in background
     ```bash
@@ -42,7 +46,7 @@ A Docker image includes **MongoDB** + **Unicorn** + **Nginx** + **Sinatra**.
     docker run -i -t -p 80:80 -p 443:443 thyrlian/muns:latest /bin/bash
     ```
 
-## Version History
+## Version History (all-in-one image)
 
 **1.0**
 
