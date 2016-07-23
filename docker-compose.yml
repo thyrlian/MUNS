@@ -3,8 +3,8 @@ version: '2'
 services:
   ruby:
     build: ./rich-ruby
-    entrypoint: /bin/bash
-    command: -c "while true; do sleep 3600; done"
+    env_file: env/ruby.env
+    command: /init/ruby.sh
     volumes:
       - $UNICORN_SOCKET
       - ./volumes/init:/init
@@ -21,6 +21,8 @@ services:
 
   nginx:
     image: nginx
+    env_file: env/nginx.env
+    command: /init/nginx.sh
     ports:
       - "80:80"
       - "443:443"
