@@ -55,5 +55,5 @@ Component | Version
 Ruby | 2.3
 MongoDB | 3.2.6
 Unicorn | 5.1.0
-Nginx | 1.11.1
+Nginx | 1.11.2
 Sinatra | 1.4.7
