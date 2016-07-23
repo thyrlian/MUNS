@@ -27,12 +27,16 @@ A Docker image includes **MongoDB** + **Unicorn** + **Nginx** + **Sinatra**.
 ```
 
 ## Structure Depiction
+
 * **Ruby** talks to -> **MongoDB** via `mongo-ruby-driver`
 * **Nginx** talks to -> **Unicorn** via `unicorn.sock`
 
-## Usage (`docker-compose`)
+## Usage (docker-compose)
 
-
+* Set environment variables in corresponding env files (under `env` directory)
+* Update startup scripts if necessary (under `volumes/init` directory)
+* Run `docker-compose up`
+* To debug with interactive mode: `docker exec -it <container_name> bash`
 
 ## Usage (all-in-one image)
 
