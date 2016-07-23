@@ -10,6 +10,7 @@ services:
       - ./volumes/bootstrap:/bootstrap
     links:
       - mongo
+
   mongo:
     image: mongo
     ports:
@@ -17,6 +18,7 @@ services:
     volumes:
       - /data/db
       - /data/configdb
+
   nginx:
     image: nginx
     ports:
