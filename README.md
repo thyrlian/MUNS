@@ -30,7 +30,11 @@ A Docker image includes **MongoDB** + **Unicorn** + **Nginx** + **Sinatra**.
 * **Ruby** talks to -> **MongoDB** via `mongo-ruby-driver`
 * **Nginx** talks to -> **Unicorn** via `unicorn.sock`
 
-## Usage
+## Usage (`docker-compose`)
+
+
+
+## Usage (all-in-one image)
 
 * Run container in background
     ```bash
