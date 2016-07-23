@@ -7,7 +7,7 @@ services:
     command: -c "while true; do sleep 3600; done"
     volumes:
       - $UNICORN_SOCKET
-      - ./volumes/bootstrap:/bootstrap
+      - ./volumes/init:/init
     links:
       - mongo
 
