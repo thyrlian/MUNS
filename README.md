@@ -46,7 +46,7 @@ A Docker image includes **MongoDB** + **Unicorn** + **Nginx** + **Sinatra**.
     docker run -i -t -p 80:80 -p 443:443 thyrlian/muns:latest /bin/bash
     ```
 
-## Version History
+## Version History (all-in-one image)
 
 **1.0**
 
