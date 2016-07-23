@@ -28,7 +28,7 @@ A Docker image includes **MongoDB** + **Unicorn** + **Nginx** + **Sinatra**.
 
 ## Structure Depiction
 * **Ruby** talks to -> **MongoDB** via `mongo-ruby-driver`
-* **Nginx** talks to -> upstream **Unicorn** via `unicorn.sock`
+* **Nginx** talks to -> **Unicorn** via `unicorn.sock`
 
 ## Usage
 
