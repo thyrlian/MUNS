@@ -61,3 +61,7 @@ MongoDB | 3.2.6
 Unicorn | 5.1.0
 Nginx | 1.11.2
 Sinatra | 1.4.7
+
+## License
+
+Copyright (c) 2016 Jing Li. See the [LICENSE](https://github.com/thyrlian/MUNS/blob/master/LICENSE) file for details.
