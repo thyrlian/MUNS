@@ -62,6 +62,16 @@ Unicorn | 5.1.0
 Nginx | 1.11.2
 Sinatra | 1.4.7
 
+**1.1**
+
+Component | Version
+--------- | -------
+Ruby | 2.3
+MongoDB | 3.2.10
+Unicorn | 5.2.0
+Nginx | 1.11.5
+Sinatra | 1.4.7
+
 ## License
 
 Copyright (c) 2016 Jing Li. See the [LICENSE](https://github.com/thyrlian/MUNS/blob/master/LICENSE) file for details.
